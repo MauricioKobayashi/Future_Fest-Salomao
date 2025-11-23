@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Salomão</title>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+    <header class="login-header">
+        <nav class="login-nav">
+            <div class="logo-container">
+                <img src="/assets/LOGO-IMG.svg" alt="Logo Salomão">
+                <h1>salomão</h1>
+            </div>
+            <a href="/" class="back-home">Voltar ao Site</a>
+        </nav>
+    </header>
+
+    <div class="form-container">
+        <img src="/assets/LOGO-IMG.svg" alt="Logo Salomão" class="logo">
+        <h2>Login</h2>
+        
+        <div id="messageContainer"></div>
+
+        <form action="/login" method="POST">
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" name="usuario" placeholder="Digite seu email" required>
+            </div>
+
+            <div class="form-group">
+                <label>Senha</label>
+                <input type="password" name="senha" placeholder="Digite sua senha" required>
+            </div>
+
+            <div class="button-container">
+                <button type="submit">Entrar</button>
+            </div>
+
+            <p class="switch">Não tem uma conta? <a href="/registro">Faça seu cadastro!</a></p>
+        </form>
+    </div>
+
+    <script>
+        // Mostrar mensagens de erro/sucesso da URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const erro = urlParams.get('erro');
+        const sucesso = urlParams.get('sucesso');
+        
+        const messageContainer = document.getElementById('messageContainer');
+        
+        if (erro) {
+            messageContainer.innerHTML = `
+                <div class="error-message" style="text-align: center; background: rgba(255,68,68,0.1); padding: 10px; border-radius: 5px; margin-bottom: 15px;">
+                    ${erro.replace(/\+/g, ' ')}
+                </div>
+            `;
+        }
+        
+        if (sucesso) {
+            messageContainer.innerHTML = `
+                <div class="success-message" style="margin-bottom: 15px;">
+                    ${sucesso.replace(/\+/g, ' ')}
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>

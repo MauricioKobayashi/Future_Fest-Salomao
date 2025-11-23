@@ -1,0 +1,148 @@
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #02253D;
+    color: #222;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* CONTAINER CENTRAL */
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 140px auto 40px;
+    padding: 20px;
+    flex-grow: 1;
+}
+
+/* CAIXA DO CHAT */
+.chat-box {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 14px rgba(0,0,0,0.1);
+    height: 400px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+.message {
+    margin-bottom: 14px;
+    padding: 12px;
+    border-radius: 10px;
+    line-height: 1.4;
+    width: fit-content;
+    max-width: 90%;
+}
+
+.user {
+    background: #e1ffc7;
+    margin-left: auto;
+}
+
+.bot {
+    background: #d8e7ff;
+}
+
+/* INPUT DO CHAT */
+.input-area {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.input-area input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #aaa;
+}
+
+.input-area button {
+    padding: 12px 16px;
+    border: none;
+    background: #4a6cf7;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.input-area button:hover {
+    background: #2049f5;
+}
+
+/* RESULTADOS */
+.result-container {
+    margin-top: 30px;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.result-title {
+    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.json-block {
+    margin-bottom: 25px;
+}
+
+.step-list {
+    padding-left: 20px;
+    color: #000;
+}
+
+.step-list li {
+    margin-bottom: 10px;
+}
+
+/* GRÁFICOS - CORRIGIDOS */
+.chart-wrapper {
+    margin: 20px 0;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.08);
+    height: 400px;
+    position: relative;
+}
+
+.chart-wrapper h3 {
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.chart-wrapper canvas {
+    width: 100% !important;
+    height: 100% !important;
+    max-height: 350px !important;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 600px) {
+    .container {
+        padding: 12px;
+        margin-top: 120px;
+    }
+    
+    .chart-wrapper {
+        height: 300px;
+    }
+    
+    .chat-box {
+        height: 300px;
+    }
+}

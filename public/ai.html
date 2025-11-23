@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assistente Financeiro - Salomão</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="/css/ai.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+</head>
+<body>
+    <header>
+        <div class="countainer-nav">
+            <div class="nome-logo">
+                <img class="logo1" src="/assets/LOGO-IMG.svg" alt="Logo Salomão">
+                <h1>salomão</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/">início</a></li>
+                    <li><a href="/area-aluno">cursos</a></li>
+                    <li><a href="/artigos">artigos</a></li>
+                    <li><a href="/ai">assistente IA</a></li>
+                    <li><a href="/#sobre">sobre nós</a></li>
+                </ul>
+            </nav>
+            <button type="button" class="login">
+                <img class="img-login" src="/assets/LOGIN-IMG.svg" alt="Ícone de login">
+                <p>LOGIN</p>
+            </button>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1 style="text-align:center; margin-bottom: 25px; font-size: 26px; font-weight: bold;">
+            Salomão AI
+        </h1>
+
+        <div class="chat-box" id="chat">
+        </div>
+
+        <div class="input-area">
+            <input type="text" id="msg" placeholder="Digite sua resposta..." autocomplete="off">
+            <button id="send">Enviar</button>
+        </div>
+
+        <div class="result-container" style="display:none">
+            <h2 class="result-title">Resumo</h2>
+            <p id="resume"></p>
+
+            <h2 class="result-title">Objetivo</h2>
+            <p id="objetivo"></p>
+
+            <h2 class="result-title">Plano Financeiro</h2>
+            <ul id="plano" class="step-list"></ul>
+
+            <div class="chart-wrapper">
+                <h3>Distribuição da Renda</h3>
+                <canvas id="graf-economia"></canvas>
+            </div>
+
+            <div class="chart-wrapper">
+                <h3>Comparação Geral</h3>
+                <canvas id="graf-barras"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="div-footer-1">
+            <h3>Logue já e salve</h3>
+            <p>Seja o primeiro a receber as novidades.</p>
+            <div>
+                <input type="text" class="caixa-email" placeholder="Email">
+                <button type="button" class="envie">Envie</button>
+            </div>
+            <h3>Redes sociais</h3>
+            <div class="countainer-redes-sociais">
+                <a href="https://www.instagram.com/"><img src="/assets/INSTAGRAM-IMG.svg" alt="Instagram"></a>
+                <a href="https://www.facebook.com/?locale=pt_BR"><img src="/assets/FACEBOOK-IMG.svg" alt="Facebook"></a>
+                <a href="https://x.com/?lang=pt"><img src="/assets/TWITTER-IMG.svg" alt="Twitter"></a>
+                <a href="https://www.youtube.com/"><img src="/assets/YOUTUBE-IMG.svg" alt="YouTube"></a>
+                <a href="https://br.linkedin.com/"><img src="/assets/LINKEDIN-IMG.svg" alt="LinkedIn"></a>
+                <a href="https://www.tiktok.com/"><img src="/assets/TIKTOK-IMG.svg" alt="TikTok"></a>
+            </div>
+        </div>
+        <img src="/assets/LOGO-IMG.svg" alt="Logo Salomão" class="img-logo-footer">
+        <div class="div-footer-2">
+            <div>
+                <h3>Suporte</h3>
+                <p>FAQS</p>
+                <p>Log in</p>
+                <p>Courses</p>
+                <p>Contate-nós</p>  
+            </div>
+            <div>
+                <h3>Companhia</h3>
+                <p>Reviews</p>
+                <p>Acessibilidade</p>
+                <p>Termos de condição</p>
+                <p>Politica de reembolso</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>

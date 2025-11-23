@@ -1,0 +1,224 @@
+/* ESTILOS PARA PÁGINAS DE LOGIN E REGISTRO */
+
+body {
+    font-family: Arial, sans-serif;
+    background: #02253D;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+    flex-direction: column;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+}
+
+.form-container {
+    background-color: rgba(0, 43, 91, 0.9);
+    padding: 2rem;
+    border-radius: 15px;
+    width: 320px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0,0,0,0.6);
+    backdrop-filter: blur(4px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #FFD600;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+h2 {
+    margin-bottom: 1.5rem;
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #FFD600;
+}
+
+p {
+    margin: 1rem 0;
+    color: #ccc;
+    line-height: 1.4;
+}
+
+label {
+    display: block;
+    text-align: left;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    width: 100%;
+    color: #fff;
+}
+
+input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    box-sizing: border-box;
+    font-size: 1rem;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+input:focus {
+    border: 2px solid #FFD600;
+}
+
+button {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 1.5rem;
+    background-color: #FFD600;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    font-size: 1rem;
+    height: 45px;
+}
+
+button:hover {
+    background-color: #e6c200;
+}
+
+.forgot, .switch {
+    font-size: 0.8rem;
+    color: #ccc;
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.switch a, .forgot {
+    color: #FFD600;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.switch a:hover {
+    text-decoration: underline;
+}
+
+.form-group {
+    width: 100%;
+    text-align: left;
+}
+
+.button-container {
+    width: 100%;
+}
+
+.error-message {
+    color: #ff4444;
+    font-size: 0.8rem;
+    display: block;
+    margin-top: 0.5rem;
+    text-align: left;
+}
+
+.success-message {
+    color: #4CAF50;
+    font-size: 0.8rem;
+    display: block;
+    margin-top: 0.5rem;
+    text-align: center;
+    background: rgba(76, 175, 80, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.btn-sair {
+    display: inline-block;
+    width: auto;
+    padding: 0.75rem 2rem;
+    margin-top: 1rem;
+    background-color: #FFD600;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    font-size: 1rem;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn-sair:hover {
+    background-color: #e6c200;
+}
+
+/* Header para páginas de login */
+.login-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(2, 37, 61, 0.9);
+    padding: 15px 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+.login-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.login-nav .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.login-nav .logo-container img {
+    width: 40px;
+    height: 40px;
+}
+
+.login-nav .logo-container h1 {
+    color: #FFD600;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.login-nav .back-home {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 16px;
+    border: 1px solid #FFD600;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.login-nav .back-home:hover {
+    background: #FFD600;
+    color: #000;
+}

@@ -1,0 +1,249 @@
+/* ÁREA DO ALUNO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #02253D;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    width: 100%;
+    margin-top: 80px;
+}
+
+/* HERO SECTION */
+.hero {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #001727 0%, #02253D 100%);
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-banner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    z-index: 2;
+    max-width: 80%;
+}
+
+/* CAROUSEL */
+.carousel-wrapper {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    z-index: 2;
+}
+
+.carousel-arrow {
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: color 0.3s;
+    user-select: none;
+}
+
+.carousel-arrow:hover {
+    color: #FFD600;
+}
+
+.carousel-cards {
+    display: flex;
+    gap: 20px;
+}
+
+.carousel-card {
+    width: 200px;
+    height: 120px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.carousel-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* SECTIONS */
+.section {
+    padding: 60px 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #FFD600;
+    text-decoration: underline;
+}
+
+/* PAGES GRID */
+.pages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.page-item {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    color: #02253D;
+}
+
+.page-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.page-item-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.page-item-label {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* AVISOS SECTION */
+.section-isos {
+    background: #001727;
+}
+
+.isos-box {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    color: #02253D;
+}
+
+.notice-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.notice-item {
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #FFD600;
+}
+
+.notice-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    color: #02253D;
+}
+
+.notice-meta {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.notice-text {
+    line-height: 1.5;
+}
+
+.notice-text strong {
+    color: #FFD600;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .hero-banner {
+        font-size: 1.8rem;
+    }
+    
+    .carousel-wrapper {
+        bottom: 30px;
+    }
+    
+    .carousel-card {
+        width: 150px;
+        height: 90px;
+    }
+    
+    .pages-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 20px;
+    }
+    
+    .page-item-icon {
+        font-size: 2.5rem;
+    }
+    
+    .section {
+        padding: 40px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        height: 400px;
+    }
+    
+    .hero-banner {
+        font-size: 1.5rem;
+    }
+    
+    .carousel-cards {
+        gap: 10px;
+    }
+    
+    .carousel-card {
+        width: 120px;
+        height: 70px;
+    }
+    
+    .pages-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Salomão</title>
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+    <header class="login-header">
+        <nav class="login-nav">
+            <div class="logo-container">
+                <img src="/assets/LOGO-IMG.svg" alt="Logo Salomão">
+                <h1>salomão</h1>
+            </div>
+            <a href="/" class="back-home">Voltar ao Site</a>
+        </nav>
+    </header>
+
+    <div class="form-container">
+        <img src="/assets/LOGO-IMG.svg" alt="Logo Salomão" class="logo">
+        <h2>Cadastro</h2>
+        
+        <div id="messageContainer"></div>
+
+        <form id="registroForm" action="/registro" method="POST">
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" name="usuario" placeholder="Digite seu email" required>
+            </div>
+
+            <div class="form-group">
+                <label>Senha</label>
+                <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
+            </div>
+
+            <div class="form-group">
+                <label>Confirmar senha</label>
+                <input type="password" id="confirmarSenha" placeholder="Digite novamente a senha" required>
+                <span id="senhaError" class="error-message"></span>
+            </div>
+
+            <div class="button-container">
+                <button type="submit">Criar Conta</button>
+            </div>
+
+            <p class="switch">Já tem uma conta? <a href="/login">Faça login!</a></p>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('registroForm').addEventListener('submit', function(e) {
+            const senha = document.getElementById('senha').value;
+            const confirmarSenha = document.getElementById('confirmarSenha').value;
+            const senhaError = document.getElementById('senhaError');
+
+            if (senha !== confirmarSenha) {
+                e.preventDefault();
+                senhaError.textContent = 'As senhas não coincidem';
+            } else {
+                senhaError.textContent = '';
+            }
+        });
+
+        document.getElementById('confirmarSenha').addEventListener('input', function() {
+            document.getElementById('senhaError').textContent = '';
+        });
+
+        // Mostrar mensagens de erro da URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const erro = urlParams.get('erro');
+        
+        const messageContainer = document.getElementById('messageContainer');
+        
+        if (erro) {
+            messageContainer.innerHTML = `
+                <div class="error-message" style="text-align: center; background: rgba(255,68,68,0.1); padding: 10px; border-radius: 5px; margin-bottom: 15px;">
+                    ${erro.replace(/\+/g, ' ')}
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
