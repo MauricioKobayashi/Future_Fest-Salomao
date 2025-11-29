@@ -14,7 +14,7 @@
         <div class="countainer-nav">
             <div class="nome-logo">
                 <img class="logo1" src="/assets/LOGO-IMG.svg" alt="Logo Salomão">
-                <h1>salomão</h1>
+                <h1>Salomão</h1>
             </div>
             <nav>
                 <ul>
@@ -25,10 +25,16 @@
                     <li><a href="/#sobre">sobre nós</a></li>
                 </ul>
             </nav>
-            <button type="button" class="login">
-                <img class="img-login" src="/assets/LOGIN-IMG.svg" alt="Ícone de login">
-                <p>LOGIN</p>
-            </button>
+            <div class="user-menu">
+                <button type="button" class="login" id="loginButton">
+                    <img class="img-login" src="/assets/LOGIN-IMG.svg" alt="Ícone de login">
+                    <p id="loginText">LOGIN</p>
+                </button>
+                <div class="user-dropdown" id="userDropdown">
+                    <a href="/area-aluno">Minha Conta</a>
+                    <a href="/sair">Sair</a>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -105,5 +111,6 @@
     </footer>
 
     <script src="/js/script.js"></script>
+    <script src="/js/auth.js"></script>
 </body>
 </html>

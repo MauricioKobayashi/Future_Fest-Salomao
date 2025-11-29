@@ -1,0 +1,5 @@
+- [ ] Padronizar lang="pt-BR" em todos os HTMLs
+- [ ] Corrigir erros em bemvindo.html (meta viewport, fechar </html>, adicionar script auth.js)
+- [ ] Atualizar headers das páginas principais para incluir user-menu como index.html
+- [ ] Garantir auth.js nas páginas que precisam (index, artigos, area-aluno, ai, bemvindo)
+- [ ] Verificar e unificar nav links
